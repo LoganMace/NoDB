@@ -1,0 +1,29 @@
+.past-cards{
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 1vh auto;
+  background-color: rgba(255, 255, 255, 0.664);
+}
+h3{
+  margin: 1.5vh auto;
+}
+h5{
+  margin: 1.5vh auto;
+}
+img{
+  height: 10vh;
+  width: auto;
+}
+p{
+  margin-bottom: 2vh;
+  width: 80%;
+}
+span{
+  font-weight: bolder;
+}

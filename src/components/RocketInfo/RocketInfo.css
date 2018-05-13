@@ -1,0 +1,20 @@
+.rocket-cards{
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 1vh auto;
+  width: 70vw;
+  background-color: rgba(255, 255, 255, 0.664);
+}
+.title{
+  margin-top: 2vh;
+}
+.desc{
+  margin: 1vh auto 2vh auto;
+  width: 70%;
+  text-align: left;
+}

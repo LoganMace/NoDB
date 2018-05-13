@@ -1,0 +1,31 @@
+.saved-card{
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 1vh auto;
+  background-color: rgba(255, 255, 255, 0.664);
+  position: relative;
+}
+.remove{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-style: none;
+  border: solid 1px black;
+  box-shadow: black 2px 2px 6px;
+  width: 4vw;
+  background-color: rgba(1, 67, 125, 0.363);
+  font-weight: bold;
+}
+.notes{
+  border: solid 1px black;
+  width: 20vw;
+  height: 10vh;
+  text-align: left;
+  margin-bottom: 2vh;
+}

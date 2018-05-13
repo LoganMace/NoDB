@@ -1,0 +1,14 @@
+.nav-container{
+  background-color: rgba(0, 0, 0, 0.822);
+  display: flex;
+  justify-content: space-evenly;
+  height: 5vh;
+  width: 100vw;
+  align-items: center;
+  margin: 0 auto;
+}
+.nav-links{
+  color: silver;
+  font-size: 1em;
+  font-weight: bolder;
+}

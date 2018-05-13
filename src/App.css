@@ -1,0 +1,8 @@
+body{
+  background-image: url("http://www.spacex.com/sites/spacex/files/styles/featured_news_widget_image/public/field/image/fh_hangar_02.jpg?itok=k4R_kpxP");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
