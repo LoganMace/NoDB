@@ -12,3 +12,15 @@
   font-size: 1em;
   font-weight: bolder;
 }
+ul{
+  
+}
+li:hover{
+  display: flex;
+  height: 100%;
+  background-color: white;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1vh;
+}

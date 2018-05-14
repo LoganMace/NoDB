@@ -6,6 +6,7 @@ import FutureLaunches from './components/FutureLaunches/FutureLaunches';
 import PastLaunches from './components/PastLaunches/PastLaunches';
 import WatchList from './components/WatchList/WatchList';
 import RocketInfo from './components/RocketInfo/RocketInfo';
+import Info from './components/Info/Info';
 
 class App extends Component {
 
@@ -15,10 +16,12 @@ class App extends Component {
       newLaunches: [],
       pastLaunches: [],
       rockets: [],
+      info: {},
       pastFlag: false,
       homeFlag: true,
       rocketFlag: false,
-      watchFlag: false
+      watchFlag: false,
+      infoFlag: true
     };
     this.homeHandler = this.homeHandler.bind(this);
     this.rocketHandler = this.rocketHandler.bind(this);
@@ -30,6 +33,7 @@ class App extends Component {
     axios
       .get("/api/getFutureLaunches")
       .then(response=>{
+        // console.log(response);
         this.setState({
           newLaunches: response.data
         })
@@ -38,6 +42,7 @@ class App extends Component {
       axios
       .get("/api/getPastLaunches")
       .then(response=>{
+        // console.log(response.data);
         this.setState({
           pastLaunches: response.data
         })
@@ -46,10 +51,20 @@ class App extends Component {
       axios
       .get("/api/getRockets")
       .then(response=>{
+        // console.log(response.data);
         this.setState({
           rockets: response.data
         })
       });
+
+      // axios
+      // .get("/api/getInfo")
+      // .then(response=>{
+      //   console.log(response.data);
+      //   this.setState({
+      //     info: response.data
+      //   })
+      // });
   }
 
   homeHandler(){
@@ -57,7 +72,8 @@ class App extends Component {
       homeFlag: true,
       rocketFlag: false,
       watchFlag: false,
-      pastFlag: false
+      pastFlag: false,
+      infoFlag: true
     })
   }
 
@@ -66,7 +82,8 @@ class App extends Component {
       homeFlag: false,
       rocketFlag: true,
       watchFlag: false,
-      pastFlag: false
+      pastFlag: false,
+      infoFlag: false
     })
   }
 
@@ -75,7 +92,8 @@ class App extends Component {
       homeFlag: false,
       rocketFlag: false,
       watchFlag: false,
-      pastFlag: true
+      pastFlag: true,
+      infoFlag: false
     })
   }
 
@@ -84,7 +102,8 @@ class App extends Component {
       homeFlag: false,
       rocketFlag: false,
       watchFlag: true,
-      pastFlag: false
+      pastFlag: false,
+      infoFlag: false
     })
   }
 
@@ -124,6 +143,7 @@ class App extends Component {
         />
         {this.state.pastFlag ? past : null}
         {this.state.homeFlag ? future : null}
+        {this.state.infoFlag ? <Info/> : null}
         {this.state.rocketFlag ? rocket : null}
         {this.state.watchFlag ? <WatchList /> : null }
       </div>

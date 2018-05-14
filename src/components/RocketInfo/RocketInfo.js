@@ -8,7 +8,7 @@ export default function RocketInfo(props){
     <div className="rocket-cards">
       <h2 className='title'>{props.name}</h2>
       <h3>First Flight: {props.first_flight}</h3>
-      <p className='desc'>Description: {props.description}</p>
+      <p className='desc'>{props.description}</p>
     </div>
   )
 }

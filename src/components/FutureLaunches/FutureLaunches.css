@@ -30,7 +30,11 @@ h5{
   border-style: none;
   border: solid 1px black;
   box-shadow: black 2px 2px 6px;
-  width: 3vw;
+  /* width: 3vw; */
   background-color: rgba(1, 67, 125, 0.363);
   font-weight: bold;
+}
+.add:active{
+  width: 4vw;
+  height: 2vw;
 }

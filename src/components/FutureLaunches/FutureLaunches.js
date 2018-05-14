@@ -1,21 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './FutureLaunches.css';
 import axios from 'axios';
-import WatchList from "./../WatchList/WatchList";
+// import WatchList from "./../WatchList/WatchList";
 
 
-class FutureLaunches extends React.Component{
+class FutureLaunches extends Component{
   constructor(props){
     super(props);
     this.handleClick=this.handleClick.bind(this)
   }
   handleClick(info){
     axios
-      .post(`/api/watchList`,info)
-      .then(response=>{
-        console.log(response.data);
-      })
-    
+      .post(`/api/watchList`,info);
+    // let addButton = document.querySelector('.add');
+    // addButton.setAttribute('disabled', true);
   }
 render(){
 
